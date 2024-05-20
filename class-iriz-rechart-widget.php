@@ -59,7 +59,8 @@ class Iriz_Rechart_Widget {
 	public function enqueue_scripts() {
 		wp_enqueue_script( 'babel', 'https://unpkg.com/@babel/standalone/babel.min.js', array(), wp_rand( 1, 100 ), true );
 		wp_enqueue_script( 'prop-types', 'https://unpkg.com/prop-types/prop-types.min.js', array(), wp_rand( 1, 100 ), true );
-		wp_enqueue_script( 'recharts', plugins_url( 'recharts/umd/Recharts.js', __FILE__ ), array( 'react', 'react-dom' ), wp_rand( 1, 100 ), true );
+		/** wp_enqueue_script( 'recharts', plugins_url( 'recharts/umd/Recharts.js', __FILE__ ), array( 'react', 'react-dom' ), wp_rand( 1, 100 ), true );*/
+		wp_enqueue_script( 'recharts', 'https://unpkg.com/recharts/umd/Recharts.js', array( 'react', 'react-dom' ), wp_rand( 1, 100 ), true );
 	}
 
 	/**
